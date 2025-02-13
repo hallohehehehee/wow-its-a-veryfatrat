@@ -1,7 +1,7 @@
 @keyframes backgroundSwitch {
-    100% { background-image: url('imageA.jpg'); }
+    50% { background-image: url('imageA.jpg'); }
     100% { background-image: url('imageB.jpg'); }
-    100% { background-image: url('imageA.jpg'); }
+    50% { background-image: url('imageA.jpg'); }
 }
 
 body {
