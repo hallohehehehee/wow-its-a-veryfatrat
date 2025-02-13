@@ -1,9 +1,10 @@
 @keyframes backgroundSwitch {
-    50% { background-image: url('imageA.jpg'); }
+    0%, 50% { background-image: url('imageA.jpg'); }
     100% { background-image: url('imageB.jpg'); }
-    50% { background-image: url('imageA.jpg'); }
 }
 
 body {
     animation: backgroundSwitch 0.952381s infinite; /* 127 BPM corresponds to 0.472 seconds per beat */
+    background-size: cover; /* Ensures images do not shrink or grow */
+    background-position: center; /* Centers the images */
 }
