@@ -5,5 +5,5 @@
 }
 
 body {
-    animation: backgroundSwitch 0.472s infinite; /* 127 BPM corresponds to 0.472 seconds per beat */
+    animation: backgroundSwitch 0.952381s infinite; /* 127 BPM corresponds to 0.472 seconds per beat */
 }
