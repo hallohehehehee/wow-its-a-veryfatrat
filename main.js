@@ -1,6 +1,6 @@
 const audio = new Audio('fatrat.mp3');
-const imgA = document.getElementById('a');
-const imgB = document.getElementById('b');
+const imgA = document.getElementById('imageA');
+const imgB = document.getElementById('imageB');
 
 let isImageA = true;
 const bpm = 127;
