@@ -32,13 +32,8 @@
                     clearInterval(switchInterval);
                     return;
                 }
-                if (isImageA) {
-                    imgA.style.display = 'none';
-                    imgB.style.display = 'block';
-                } else {
-                    imgA.style.display = 'block';
-                    imgB.style.display = 'none';
-                }
+                imgA.style.display = isImageA ? 'none' : 'block';
+                imgB.style.display = isImageA ? 'block' : 'none';
                 isImageA = !isImageA;
             }, interval);
         });
