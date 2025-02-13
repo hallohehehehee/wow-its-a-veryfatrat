@@ -1,5 +1,58 @@
-<div id="timer" style="font-size: 24px; margin-top: 20px;">
-    Seconds watching Fat Rat: <span id="seconds">0</span>
-</div>
+# Timer and Audio Image Switcher
 
-<script src="main.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer and Audio Image Switcher</title>
+    <style>
+        #imageB {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Timer and Audio Image Switcher</h1>
+    <img id="imageA" src="imageA.jpg" alt="Image A">
+    <img id="imageB" src="imageB.jpg" alt="Image B">
+    
+    <div id="timer" style="font-size: 24px; margin-top: 20px;"></div>
+
+    <script>
+        const audio = new Audio('fatrat.mp3');
+        const imgA = document.getElementById('imageA');
+        const imgB = document.getElementById('imageB');
+
+        let isImageA = true;
+        const bpm = 127;
+        const interval = (60 / bpm) * 1000; // Convert BPM to milliseconds
+
+        audio.addEventListener('play', () => {
+            const switchInterval = setInterval(() => {
+                if (audio.paused) {
+                    clearInterval(switchInterval);
+                    return;
+                }
+                if (isImageA) {
+                    imgA.style.display = 'none';
+                    imgB.style.display = 'block';
+                } else {
+                    imgA.style.display = 'block';
+                    imgB.style.display = 'none';
+                }
+                isImageA = !isImageA;
+            }, interval);
+        });
+
+        audio.play();
+
+        // Timer functionality
+        let seconds = 0;
+        setInterval(() => {
+            seconds++;
+            document.getElementById('timer').innerText = `Timer: ${seconds} seconds`;
+        }, 1000);
+    </script>
+</body>
+</html>
