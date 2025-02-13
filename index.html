@@ -23,31 +23,32 @@
         }, switchInterval);
     </script>
     <div class="overlay" id="overlay"></div>
-<div class="popup" id="popup">
-  <p>Click to play audio</p>
-  <button id="playButton">Play Audio</button>
-  <button id="noAudioButton">Show Page Without Audio</button>
-</div>
-<audio id="audio" loop>
-  <source src="fatrat.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
-<div class="timer" id="timer">Seconds watching fish: 0:00</div>
+    <div class="popup" id="popup">
+        <p>Click to play audio</p>
+        <button id="playButton">Play Audio</button>
+        <button id="noAudioButton">Show Page Without Audio</button>
+    </div>
+    <audio id="audio" loop>
+        <source src="freebird.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <div class="timer" id="timer">Seconds watching fish: 0:00</div>
 
-<script>
-document.getElementById('overlay').style.display = 'block';
-document.getElementById('popup').style.display = 'block';
+    <script>
+        document.getElementById('overlay').style.display = 'block';
+        document.getElementById('popup').style.display = 'block';
 
-document.getElementById('playButton').onclick = function() {
-  document.getElementById('audio').play();
-  document.getElementById('overlay').style.display = 'none';
-  document.getElementById('popup').style.left = '-9999px'; // Move popup offscreen
-};
+        document.getElementById('playButton').onclick = function() {
+            document.getElementById('audio').play();
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('popup').style.left = '-9999px'; // Move popup offscreen
+        };
 
-document.getElementById('noAudioButton').onclick = function() {
-  document.getElementById('overlay').style.display = 'none';
-  document.getElementById('popup').style.left = '-9999px'; // Move popup offscreen
-</script>
+        document.getElementById('noAudioButton').onclick = function() {
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('popup').style.left = '-9999px'; // Move popup offscreen
+        };
+    </script>
 
 </body>
 </html>
