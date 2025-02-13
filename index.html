@@ -1,7 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="main.css">
+    <style>
+        @keyframes backgroundSwitch {
+            0%, 50% { background-image: url('imageA.jpg'); }
+            100% { background-image: url('imageB.jpg'); }
+        }
+
+        body {
+            animation: backgroundSwitch 0.952381s infinite;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+    </style>
 <style>
 img {
   width: 100%;
