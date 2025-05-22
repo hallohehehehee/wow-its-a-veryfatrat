@@ -1,26 +1,13 @@
-const audio = new Audio('fatrat.mp3');
-const imgA = document.getElementById('imageA');
-const imgB = document.getElementById('imageB');
+const photo = document.getElementById('photo');
 
-let isImageA = true;
+// Calculate the interval in milliseconds for 127 BPM
 const bpm = 127;
 const interval = (60 / bpm) * 1000; // Convert BPM to milliseconds
 
-audio.addEventListener('play', () => {
-    const switchInterval = setInterval(() => {
-        if (audio.paused) {
-            clearInterval(switchInterval);
-            return;
-        }
-        if (isImageA) {
-            imgA.style.display = 'none';
-            imgB.style.display = 'block';
-        } else {
-            imgA.style.display = 'block';
-            imgB.style.display = 'none';
-        }
-        isImageA = !isImageA;
-    }, interval);
-});
+// Function to flip the photo
+function flipPhoto() {
+    photo.classList.toggle('flipped');
+}
 
-audio.play();
+// Set an interval to flip the photo at the specified BPM
+setInterval(flipPhoto, interval);
