@@ -11,7 +11,7 @@ body {
 }
 
 #photo {
-    width: 300px; /* balls */
+    width: 1920px; /* balls */
     transition: transform 0.5s;
     transform-style: preserve-3d;
 }
