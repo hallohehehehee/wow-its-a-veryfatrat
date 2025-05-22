@@ -1,11 +1,21 @@
-@keyframes backgroundSwitch {
-    0%, 50% { background-image: url('imageA.jpg'); }
-    100% { background-image: url('imageB.jpg'); }
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
 }
 
-body {
-    animation: backgroundSwitch 0.952381s infinite; /* 127 BPM corresponds to 0.472 seconds per beat */
-    background-size: cover; /* Ensures images do not shrink or grow */
-    background-position: center; /* Centers the images */
-    position: relative; /* Establishes a positioning context */
+.container {
+    perspective: 1000px;
+}
+
+#photo {
+    width: 300px; /* Adjust size as needed */
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.flipped {
+    transform: rotateY(180deg);
 }
