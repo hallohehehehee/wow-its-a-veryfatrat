@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photo Flip at 127 BPM</title>
-    <link rel="stylesheet" href="main.css">
+    <title>Image Switcher</title>
+    <style>
+        #photo {
+            width: 1000px; /* Adjust as needed */
+            height: auto;
+            transition: opacity 0.5s; /* Smooth transition */
+        }
+        .hidden {
+            opacity: 0;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <img id="photo" src="imageA.jpg" alt="Flipping Photo">
-    </div>
+    <img id="photo" src="imageA.jpg" alt="Image" />
+    <audio id="fatrat-theme" src="fatrat.mp3"></audio>
+    <button id="playButton">Play</button>
 
-    <audio id="robotnik-theme" src="fatrat.mp3" preload="auto"></audio>
-
-    <button id="playButton">Start</button>
-
-    <script src="main.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
