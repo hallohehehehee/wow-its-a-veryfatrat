@@ -28,21 +28,17 @@ document.addEventListener('DOMContentLoaded', () => {
                     playButton.style.display = 'none'; // Hide the play button
                     intervalId = setInterval(switchImage, interval); // Start switching images
                 })
-                .catch(error => {
+                .catch((error) => {
                     console.error('Error playing audio:', error);
                 });
         });
     }
 
-    // Stop switching images when the audio ends
-    if (audio) {
-        audio.addEventListener('ended', () => {
-            console.log('Audio has ended. Stopping image switch.');
-            clearInterval(intervalId); // Stop the image switching
-            photo.src = 'imageA.jpg'; // Reset to imageA if needed
-            playButton.style.display = 'block'; // Show the play button again
-            isImageA = true; // Reset image state
-        });
-    }
+    // Optional: Stop the interval and reset when audio ends
+    audio.addEventListener('ended', () => {
+        clearInterval(intervalId); // Stop switching images
+        playButton.style.display = 'block'; // Show the play button again
+        photo.src = 'imageA.jpg'; // Reset to the first image
+        isImageA = true; // Reset the image state
+    });
 });
-```
