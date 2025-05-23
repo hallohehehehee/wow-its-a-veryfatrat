@@ -1,21 +1,13 @@
 body {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-}
-
-.container {
-    perspective: 1000px;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
 }
 
 #photo {
-    width: 1080px; /* balls */
-    transition: transform 0.5s;
-    transform-style: preserve-3d;
-}
-
-.flipped {
-    transform: rotateY(180deg);
+    max-width: 100%; /* Ensure the image does not exceed the width of its container */
+    max-height: 100%; /* Ensure the image does not exceed the height of its container */
+    object-fit: contain; /* Maintain aspect ratio */
 }
