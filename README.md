@@ -1,1 +1,1 @@
-this is broken rn but im trying to fix it
+fixed after like 3 months
