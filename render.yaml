@@ -1,0 +1,9 @@
+# Exported from Render on 2025-05-27T12:10:40Z
+services:
+- type: web
+  name: veryfatrat
+  runtime: static
+  repo: https://github.com/hallohehehehee/wow-its-a-veryfatrat
+  staticPublishPath: Build
+  autoDeployTrigger: commit
+version: "1"
